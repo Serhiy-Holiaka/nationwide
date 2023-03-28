@@ -7,8 +7,24 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Bayon','Helvetica', ...defaultTheme.fontFamily.sans],
-              },
+                sans: ['Bayon', 'Helvetica', ...defaultTheme.fontFamily.sans],
+            },
+            colors: {
+                white: {
+                    DEFAULT: 'var(--white)'
+                },
+                blue: {
+                    light: 'var(--blue-light)'
+                },
+                black: {
+                    DEFAULT: 'var(--black)',
+                    light: 'var(--black-light)',
+                    dark: 'var(--black-dark)'
+                },
+                red: {
+                    DEFAULT: 'var(--red)'
+                },
+            },
         },
     },
     plugins: [],
