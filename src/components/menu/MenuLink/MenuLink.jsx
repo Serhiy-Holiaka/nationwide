@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { useToggle } from '@/hooks/useToggle';
 import { NavLink } from 'react-router-dom';
 import { useDocumentLockScrollY } from '@/hooks/useDocumentLockScrollY';
+import ArrowDownIcon from '@/components/ui/icons/ArrowDownIcon';
 
 const MenuLink = ({ children, href, subMneu }) => {
     const [openedCancelModal, toggleCancelModal] = useToggle(false);
@@ -33,11 +34,14 @@ const MenuLink = ({ children, href, subMneu }) => {
                 className={`${openedCancelModal ? 'visible' : 'invisible'} fixed top-0 left-0 right-0 bottom-0 z-[4]`}
             />
             <button
-                className="text-[15px] text-black-dark hover:text-blue-dark transition relative z-10"
+                className={`text-[15px] ${
+                    openedCancelModal ? 'text-blue-dark' : 'text-black-dark'
+                }  inline-flex items-center hover:text-blue-dark transition relative z-10`}
                 onClick={toggleModalHandler}
                 type="button"
             >
                 {children}
+                <ArrowDownIcon className={`${openedCancelModal ? 'rotate-180 [&>path]:stroke-blue-dark' : 'rotate-0'} ml-1 transition-transform`} />
             </button>
             {subMneu && (
                 <div
@@ -49,7 +53,11 @@ const MenuLink = ({ children, href, subMneu }) => {
                         {subMneu.map(({ name, href }, i) => (
                             <li key={i}>
                                 <NavLink
-                                    className="text-[15px] text-black-dark block whitespace-nowrap px-[10px] py-[13px] border-b hover: transition"
+                                    className={({ isActive }) =>
+                                        `${
+                                            isActive ? 'text-blue-dark' : 'text-black-dark'
+                                        } relative block text-[15px] whitespace-nowrap px-[10px] py-[13px] border-b hover:text-blue-dark transition z-10`
+                                    }
                                     onClick={toggleCancelModal}
                                     to={href}
                                 >
@@ -63,8 +71,11 @@ const MenuLink = ({ children, href, subMneu }) => {
         </div>
     ) : (
         <NavLink
+            onClick={toggleCancelModal}
             className={({ isActive }) =>
-                `${isActive ? 'text-blue-dark' : 'text-black-dark'} text-[15px] py-1 hover:text-blue-dark transition`
+                `${
+                    isActive ? 'text-blue-dark' : 'text-black-dark'
+                } relative text-[15px] desktop:py-1 py-[26px] hover:text-blue-dark transition z-10`
             }
             to={href}
         >

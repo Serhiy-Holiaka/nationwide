@@ -13,7 +13,7 @@ const Header = () => {
             <Link to="/"><LogoIcon /></Link>
             <div className="inline-flex items-center">
                 {!isMobile && <DesktopMenu />}
-                <Button>Button</Button>
+                <Button additionalClasses="z-[5]">Button</Button>
                 {isMobile && <MobileMenu />}
             </div>
         </div>

@@ -9,7 +9,7 @@ const Button = forwardRef(
             <button
                 ref={ref}
                 type={actionType}
-                className={`flex justify-center items-center px-5 py-[15px] min-w-[115px] h-[45px] rounded-[55px] text-[15px] text-white ${btnColor} transition hover:shadow-md ${additionalClasses}`}
+                className={`flex justify-center items-center px-5 py-[15px] min-w-[115px] h-[45px] rounded-[55px] text-[15px] text-white ${btnColor} transition hover:shadow-md active:translate-y-[2px] ${additionalClasses}`}
                 onClick={handleClick}
                 {...rest}
             >
