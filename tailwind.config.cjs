@@ -18,7 +18,7 @@ module.exports = {
             },
         },
         maxWidth: {
-            cotainer: '1442px',
+            container: '1442px',
         },
         extend: {
             fontFamily: {

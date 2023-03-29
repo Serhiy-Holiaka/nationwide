@@ -7,6 +7,7 @@ import FillableForm from '@/pages/FillableForm';
 import RateQuotes from '@/pages/RateQuotes';
 import Transfer from '@/pages/Transfer';
 import Expedited from '@/pages/Expedited';
+import ContactUs from '@/pages/ContactUs';
 
 const App = () => {
     const router = createBrowserRouter([
@@ -42,6 +43,10 @@ const App = () => {
                     path: 'nm-expedited',
                     element: <Expedited />,
                 },
+                {
+                    path: 'contact-us',
+                    element: <ContactUs />,
+                }
             ],
         },
     ]);

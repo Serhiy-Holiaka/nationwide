@@ -45,7 +45,7 @@ const MenuLink = ({ children, href, subMneu }) => {
             </button>
             {subMneu && (
                 <div
-                    className={`absolute top-[35px] left-0 rounded-lg z-[5] transition-all duration-150 shadow-lg ${
+                    className={`absolute top-[35px] left-0 rounded-lg z-[5] bg-white overflow-hidden transition-all duration-150 shadow-lg ${
                         openedCancelModal ? 'translate-y-0 opacity-1 visible' : '-translate-y-10 opacity-0 invisible'
                     }`}
                 >

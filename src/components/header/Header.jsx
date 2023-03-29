@@ -9,11 +9,11 @@ const Header = () => {
     const isMobile = useMediaQuery('(max-width: 1000px)');
 
     return (
-        <div className="container max-w-cotainer flex justify-between items-center py-5">
+        <div className="container max-w-container flex justify-between items-center py-5">
             <Link to="/"><LogoIcon /></Link>
             <div className="inline-flex items-center">
                 {!isMobile && <DesktopMenu />}
-                <Button additionalClasses="z-[5]">Button</Button>
+                <Button additionalClasses="z-[5]">Contact Us</Button>
                 {isMobile && <MobileMenu />}
             </div>
         </div>
