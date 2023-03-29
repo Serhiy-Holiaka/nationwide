@@ -6,7 +6,7 @@ const Hero = () => {
     const isMobile = useMediaQuery('(max-width: 1000px)');
 
     return (
-        <section className="desktop:h-screen desktop:max-h-[765px]">
+        <section className="desktop:h-screen desktop:max-h-[765px] bg-black-dark">
             {isMobile ? <HeroSwiperMobile /> : <HeroSwiper />}
         </section>
     );

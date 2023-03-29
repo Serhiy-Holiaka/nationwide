@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <section className="block w-full bg-black-dark py-[52px]">
             <div className="container">
-                <ul className="flex flex-wrap justify-center text-white [&>li]:px-2 last:[&>li]:pr-0 first:[&>li]:pl-0">
+                <ul className="flex flex-wrap gap-1 justify-center text-white [&>li]:flex [&>li]:items-center [&>li]:h-[15px] [&>li]:border-l [&>li]:border-l-white first:[&>li]:border-none [&>li]:px-2 last:[&>li]:pr-0 first:[&>li]:pl-0">
                     <li>
                         <Link className={linkStyles} to="/">
                             Home

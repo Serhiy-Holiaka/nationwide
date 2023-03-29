@@ -5,9 +5,9 @@ export const HERO_SLIDER_LIST = [
         image: 'hero-slide-one.webp',
     },
     {
-        title: 'From distribution, logistics and warehouse and event organization, we have a handful of solutions for you.',
+        title: 'From distribution and logistics, we have a handful of solutions for you.',
         href: '/contact-us',
-        image: 'hero-slide-one.webp',
+        image: 'hero-slide-two.webp',
     },
     {
         title: 'Now offering domestic & international logistics services!',
@@ -15,13 +15,8 @@ export const HERO_SLIDER_LIST = [
         image: 'hero-slide-one.webp',
     },
     {
-        title: 'From distribution, logistics and warehouse and event organization, we have a handful of solutions for you.',
+        title: 'From distribution and logistics, we have a handful of solutions for you.',
         href: '/contact-us',
-        image: 'hero-slide-one.webp',
-    },
-    {
-        title: 'Now offering domestic & international logistics services!',
-        href: '/contact-us',
-        image: 'hero-slide-one.webp',
+        image: 'hero-slide-two.webp',
     },
 ];

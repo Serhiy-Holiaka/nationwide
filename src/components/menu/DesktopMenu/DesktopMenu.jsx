@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import PropTypes from 'prop-types';
-import MenuLink from '../MenuLink';
+import MenuLink from '../MenuLink/MenuLink';
 import { MENU_LIST } from '@/constants/menu.constants';
 
 const DesktopMenu = ({ menuList = MENU_LIST }) => {
