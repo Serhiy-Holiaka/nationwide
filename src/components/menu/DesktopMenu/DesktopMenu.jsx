@@ -8,7 +8,7 @@ const DesktopMenu = ({ menuList = MENU_LIST }) => {
         <ul className="flex flex-row justify-center mr-[52px]">
             {menuList.map(({ name, href, subMenu }, i) => (
                 <li key={i} className="mr-[32px] last:mr-0">
-                    <MenuLink href={href} subMneu={subMenu}>
+                    <MenuLink href={href} subMenu={subMenu}>
                         {name}
                     </MenuLink>
                 </li>

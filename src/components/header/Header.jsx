@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import MobileMenu from '@/components/menu/MobileMenu';
 import DesktopMenu from '@/components/menu/DesktopMenu';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
@@ -6,18 +6,24 @@ import Button from '@/components/ui/button';
 import LogoIcon from '@/components/ui/icons/LogoIcon';
 import { Link } from 'react-router-dom';
 import { MenuProvider } from '@/context/MenuContext';
+import { useDocumentLockScrollY } from '@/hooks/useDocumentLockScrollY';
 
 const Header = () => {
     const isMobile = useMediaQuery('(max-width: 1000px)');
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const { lockScrollY, unlockScrollY } = useDocumentLockScrollY();
+
+    useEffect(() => {
+        isMenuOpen ? lockScrollY() : unlockScrollY();
+    }, [isMenuOpen, lockScrollY, unlockScrollY]);
 
     return (
         <MenuProvider isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}>
-            <div className="container max-w-container flex justify-between items-center py-5">
-                <Link to="/">
+            <div className="relative container max-w-container flex justify-between items-center py-5 z-[4]">
+                <Link onClick={e => e.stopPropagation()} to="/">
                     <LogoIcon />
                 </Link>
-                <div className="inline-flex items-center">
+                <div className="relative inline-flex items-center -z-[1]">
                     {!isMobile && <DesktopMenu />}
                     <Button additionalClasses="z-[5]">Contact Us</Button>
                     {isMobile && <MobileMenu />}

@@ -19,12 +19,12 @@ const MobileMenu = ({ menuList = MENU_LIST }) => {
                     e.stopPropagation();
                     setIsMenuOpen(false);
                 }}
-                className={`${isMenuOpen ? 'visible' : 'invisible'} fixed top-0 left-0 right-0 bottom-0 z-[5]`}
+                className={`${isMenuOpen ? 'visible' : 'invisible'} backdrop-blur-sm fixed top-0 left-0 right-0 bottom-0 z-[5]`}
             />
             <button
                 type="button"
                 onClick={handleClick}
-                className="is-clickable relative flex flex-col items-center justify-around w-10 h-7 z-[3]"
+                className="is-clickable relative flex flex-col items-center justify-around w-10 h-7 z-[5]"
             >
                 <span
                     className={`absolute w-7 h-[2px] rounded-md bg-blue-dark ${
@@ -46,7 +46,7 @@ const MobileMenu = ({ menuList = MENU_LIST }) => {
                 <ul className="flex flex-col justify-center w-full">
                     {menuList.map(({ name, href, subMenu }, i) => (
                         <li key={i} className="text-center">
-                            <MenuLinkMobile href={href} subMneu={subMenu}>
+                            <MenuLinkMobile href={href} subMenu={subMenu}>
                                 {name}
                             </MenuLinkMobile>
                         </li>

@@ -1,6 +1,6 @@
 import Hero from '@/components/home/hero';
 import Button from '@/components/ui/button';
-import ContactUs from '@/components/home/contact-us';
+import ContactUs from '@/components/contact-us';
 
 const Home = () => {
     return (
