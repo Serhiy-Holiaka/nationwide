@@ -18,12 +18,12 @@ module.exports = {
                 desktop: '2rem',
             },
         },
-        maxWidth: {
-            container: '1442px',
-        },
         extend: {
             fontFamily: {
                 sans: ['Bayon', 'Helvetica', ...defaultTheme.fontFamily.sans],
+            },
+            backgroundImage: {
+                'contact-bg': "url('/images/contsct-bg.webp')",
             },
             colors: {
                 white: {
@@ -41,6 +41,9 @@ module.exports = {
                 red: {
                     DEFAULT: 'var(--red)',
                 },
+            },
+            maxWidth: {
+                container: '1442px',
             },
         },
     },

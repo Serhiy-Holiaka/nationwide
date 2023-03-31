@@ -34,11 +34,11 @@ const Layout = () => {
     };
 
     return (
-        <main onClick={onGlobalClick}>
+        <div onClick={onGlobalClick}>
             <Header />
             <Outlet />
             <Footer />
-        </main>
+        </div>
     );
 };
 
