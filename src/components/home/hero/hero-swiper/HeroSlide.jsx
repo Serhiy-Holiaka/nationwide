@@ -1,8 +1,11 @@
 import { memo } from 'react';
 import PropTypes from 'prop-types';
+import { useNavigate } from 'react-router-dom';
 import Button from '@/components/ui/button/Button';
 
 const HeroSlide = ({ image, title }) => {
+    const navigate = useNavigate();
+
     return (
         <div className="relative grid grid-cols-2 h-full w-full bg-white">
             <div className="flex flex-col justify-center max-w-[725px] pl-8 pr-6 pb-[86px] desktop:ml-auto">
@@ -13,7 +16,7 @@ const HeroSlide = ({ image, title }) => {
                     one-stop transportation solution.
                 </p>
                 <div>
-                    <Button>Contact Us</Button>
+                    <Button onClick={() => navigate('/contact-us')}>Contact Us</Button>
                 </div>
             </div>
             <div className="relative desktop:col-span-1 desktop:rounded-l-[45px] overflow-hidden">

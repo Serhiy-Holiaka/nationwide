@@ -26,10 +26,10 @@ export const MENU_LIST = [
     },
     {
         name: 'N&M Transfer',
-        href: '/nm-transfer',
+        href: '#',
     },
     {
         name: 'N&M Expedited',
-        href: '/nm-expedited',
+        href: '#',
     },
 ];

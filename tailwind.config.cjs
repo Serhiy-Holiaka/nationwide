@@ -9,6 +9,7 @@ module.exports = {
         screens: {
             tablet: '640px',
             desktop: '1000px',
+            large: '1280px'
         },
         container: {
             center: true,
@@ -23,7 +24,8 @@ module.exports = {
                 sans: ['Bayon', 'Helvetica', ...defaultTheme.fontFamily.sans],
             },
             backgroundImage: {
-                'contact-bg': "url('/images/contsct-bg.webp')",
+                'contact-bg': 'url("/images/contsct-bg.webp")',
+                'contact-map-bg': 'url("/images/contact-map-bg.webp")',
             },
             colors: {
                 white: {
