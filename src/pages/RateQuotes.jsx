@@ -1,3 +1,5 @@
+import RequestForm from '@/components/request-quote';
+
 const RateQuotes = () => {
     return (
         <div className="container max-w-[930px] mx-auto pb-[52px]">
@@ -9,10 +11,11 @@ const RateQuotes = () => {
                 representatives for processing, and will provide you with a quote in the manner of your choosing (via
                 Email or Phone Call).
             </p>
-            <p className="text-base text-red leading-[150%] text-center mb-8">
+            <p className="text-base text-red leading-[150%] text-center">
                 Note: If you have more than 3 rate quote requests or you prefer to speak to someone directly, please
                 call 800-236-3230We will accept website quotes on Monday through Friday. 7 AM to 4:30 PM.
             </p>
+            <RequestForm />
         </div>
     );
 };

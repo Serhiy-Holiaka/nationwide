@@ -24,8 +24,8 @@ module.exports = {
                 sans: ['Bayon', 'Helvetica', ...defaultTheme.fontFamily.sans],
             },
             backgroundImage: {
-                'contact-bg': 'url("/images/contsct-bg.webp")',
-                'contact-map-bg': 'url("/images/contact-map-bg.webp")',
+                'contact-bg': `url(${process.env.BASE_URL}images/contsct-bg.webp)`,
+                'contact-map-bg': `url(${process.env.BASE_URL}images/contact-map-bg.webp")`,
             },
             colors: {
                 white: {

@@ -2,6 +2,7 @@
     "name": "nmnationwide",
     "private": true,
     "version": "0.0.0",
+    "homepage": "/nmnationwide/",
     "type": "module",
     "engines": {
         "node": ">=16.0.0",

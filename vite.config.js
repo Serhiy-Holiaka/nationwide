@@ -3,12 +3,17 @@ import react from '@vitejs/plugin-react';
 import eslint from 'vite-plugin-eslint';
 
 // https://vitejs.dev/config/
-export default defineConfig({
-    server: {
-        port: 3000,
-    },
-    plugins: [react(), eslint()],
-    resolve: {
-        alias: [{ find: '@', replacement: '/src' }],
-    },
+
+export default defineConfig(({ mode }) => {
+    const buildType = mode === 'production' ? '/nmnationwide/' : '/';
+    return {
+        server: {
+            port: 3000,
+        },
+        base: buildType,
+        plugins: [react(), eslint()],
+        resolve: {
+            alias: [{ find: '@', replacement: '/src' }],
+        },
+    }
 });

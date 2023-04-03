@@ -31,7 +31,7 @@ const Nationwide = () => {
                         className="absolute top-0 left-0 w-full h-full object-cover"
                         width={690}
                         height={450}
-                        src="/images/service-img-1.webp"
+                        src={`${import.meta.env.BASE_URL}images/service-img-1.webp`}
                         alt="service img"
                     />
                 </div>
@@ -40,7 +40,7 @@ const Nationwide = () => {
                         className="absolute top-0 left-0 w-full h-full object-cover"
                         width={690}
                         height={450}
-                        src="/images/service-img-2.webp"
+                        src={`${import.meta.env.BASE_URL}images/service-img-2.webp`}
                         alt="service img"
                     />
                 </div>
@@ -81,7 +81,7 @@ const Nationwide = () => {
                         className="absolute top-0 left-0 w-full h-full object-cover"
                         width={690}
                         height={450}
-                        src="/images/service-img-3.webp"
+                        src={`${import.meta.env.BASE_URL}images/service-img-3.webp`}
                         alt="service img"
                     />
                 </div>

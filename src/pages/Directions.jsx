@@ -11,7 +11,7 @@ const Directions = () => {
                     className="relative w-full h-full object-contain"
                     width={1920}
                     height={752}
-                    src="/images/map-img.webp"
+                    src={`${import.meta.env.BASE_URL}images/map-img.webp`}
                     alt="map-img"
                 />
             </div>

@@ -24,7 +24,7 @@ const HeroSlideMobile = ({ image, title }) => {
                         className="absolute w-full h-full object-cover rounded-[45px] overflow-hidden z-10"
                         width={945}
                         height={760}
-                        src={`/images/slider/${image}`}
+                        src={`${import.meta.env.BASE_URL}images/slider/${image}`}
                         alt="slide-img"
                     />
                 </div>
